@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SettingsLabKotlin</string>
+    <string name="menuSettingsText">Settings</string>
+</resources>
