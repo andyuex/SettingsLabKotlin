@@ -1,17 +1,17 @@
 package es.unex.giiis.asee.settingslabkotlin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceManager
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // TODO Set preferences' default values
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
 
         supportFragmentManager
             .beginTransaction()
@@ -27,8 +27,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menuSettings -> {
-                // TODO Display the settings fragment as the main content
-
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container_view, SettingsFragment())
+                    .addToBackStack(null)
+                    .commit()
                 true
             }
             else -> super.onOptionsItemSelected(item)

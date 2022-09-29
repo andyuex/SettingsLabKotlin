@@ -1,6 +1,17 @@
 <PreferenceScreen
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="NightModeKey"
+        android:title="@string/nightModeText"
+        android:summary="@string/nightModeSummaryText"/>
 
+    <EditTextPreference
+        android:defaultValue="Jhon Snow"
+        android:key="UserNameKey"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/userNameText" />
 
 </PreferenceScreen>

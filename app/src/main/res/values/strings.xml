@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SettingsLabKotlin</string>
     <string name="menuSettingsText">Settings</string>
+    <string name="nightModeText">Night Mode</string>
+    <string name="nightModeSummaryText">Activate the night mode to dim the screen</string>
+    <string name="userNameText">User Name</string>
 </resources>

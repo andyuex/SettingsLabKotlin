@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.preference.PreferenceManager
 
 class ContentFragment : Fragment(R.layout.fragment_content) {
 
@@ -18,9 +19,8 @@ class ContentFragment : Fragment(R.layout.fragment_content) {
     override fun onResume() {
         super.onResume()
 
-        val userName = ""
-
-        // TODO Get the user name from the preferences
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        val userName = sharedPreferences.getString(SettingsFragment.UserNameKey, "")
 
         textViewUserName.text = "Hello, $userName!"
     }

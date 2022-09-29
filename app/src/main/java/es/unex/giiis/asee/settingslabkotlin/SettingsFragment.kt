@@ -9,7 +9,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         const val NightModeKey = "NightModeKey"
         const val UserNameKey = "UserNameKey"
     }
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        // TODO Load the preferences from an XML resource
+        setPreferencesFromResource(R.xml.preferences, rootKey)
     }
 }
